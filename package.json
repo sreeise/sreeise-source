@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/sreeise/sreeise-source/issues"
   },
-  "homepage": "https://github.com/sreeise/sreeise-source#readme"
+  "homepage": "https://github.com/sreeise/sreeise-source#readme",
+  "dependencies": {
+    "html5-boilerplate": "^6.1.0"
+  }
 }
