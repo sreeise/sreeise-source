@@ -1,0 +1,45 @@
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 1em;
+    background-color: #ECEFF1;
+}
+
+header nav {
+    float: right;
+    margin: 20px 15px 10px 10px;
+}
+
+.centered {
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    background: transparent;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0.5em 3em 0 0;
+    float: right;
+}
+
+.cards {
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
