@@ -15,16 +15,19 @@ let work = [
               button={"See More"}/>,
     <CardInfo href={"https://www.linkedin.com/in/sean-r-48b36b135/"} src={"images/linkedin-logo-702336.jpg"}
               title={"Find me on LinkedIn"} button={"See More"}/>,
-    <CardInfo href={"https://bitbucket.org/sreeise/"} src={"images/bitbucket.jpg"} title={"My projects on Bitbucket"}
+    <CardInfo href={"https://bitbucket.org/sreeise/"} src={"images/bitbucket.jpg"} title={"My projects on BitBucket"}
               button={"See More"}/>,
     <CardInfo href={"https://bitsrc.io/sreeise"} src={"images/bit.png"} title={"My projects on Bit"}
               button={"See More"}/>,
+    <CardInfo href={"https://github.com/sreeise/sreeise-source"} src={"images/sreeise-source.png"}
+              title={"The source code for this website. Built using React."}
+              button={"Lets Go!"}/>,
 ];
 
 class App extends Component {
     render() {
         return (
-            <div>
+            <div className={"container"}>
                 <PageHeader/>
                 <AboutMe/>
                 <CardFlex cards={work}/>

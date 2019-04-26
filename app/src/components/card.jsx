@@ -46,7 +46,7 @@ class CardInfo extends React.Component {
                 <CardActions>
                     <a href={this.props.href}>
                         <Button size="small" color="primary">
-                            Learn More
+                            {this.props.button}
                         </Button>
                     </a>
                 </CardActions>

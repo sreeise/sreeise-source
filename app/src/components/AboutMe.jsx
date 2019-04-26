@@ -32,7 +32,7 @@ function AboutMe(props) {
         <Card className={classes.card}>
             <CardContent>
                 <Typography variant="h5" component="h5">
-                    My name is Sean R.
+                    My name is Sean Reeise.
                 </Typography>
                 <Typography variant="p" component="h5">
                     <br/>
@@ -40,11 +40,17 @@ function AboutMe(props) {
                 </Typography>
                 <Typography variant="p" component="p">
                     <br/>
-                    Some of my favorite hobbies are programming and development.
+                    Some of my favorite hobbies are programming and development. I huge
+                    supporter of open source and a regular contributor to several
+                    projects from Mozilla including the Firefox browser.
                     <br/>
                     <br/>
-                    I hold an associates in religion and will graduate with a bachelors in information technology
-                    in may 2019 from Liberty University.
+                    I enjoy learning pretty much anything that has to do with technology
+                    and development.
+                    <br/>
+                    <br/>
+                    I hold an Associate of Arts in Religion and will graduate with a Bachelors of Science
+                    in Information Technology in May 2019 from Liberty University.
                 </Typography>
                 <Typography variant="p" component="h5">
                     <br/>

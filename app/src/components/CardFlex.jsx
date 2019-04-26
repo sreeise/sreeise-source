@@ -17,7 +17,7 @@ class CardFlex extends React.Component {
     render() {
         return (
             <div>
-                <main className={"container"}>
+                <main>
                     <section className={"cards"}>
                         {this.state.cards.map((card) => {
                             return (
