@@ -39,7 +39,7 @@ class CardInfo extends React.Component {
                     </a>
                 </CardActionArea>
                 <CardContent>
-                    <Typography gutterBottom variant="p" component="p">
+                    <Typography gutterBottom variant="title" component="p">
                         {this.props.title}
                     </Typography>
                 </CardContent>

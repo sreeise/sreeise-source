@@ -4,33 +4,62 @@ import './css/normalize.css';
 import CardInfo from "./components/card.jsx";
 import CardFlex from "./components/CardFlex";
 import PageHeader from "./components/PageHeader";
-import AboutMe from "./components/AboutMe";
+import AboutMeCards from "./components/AboutMe";
+import config from "./config";
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+
+const useStyles = makeStyles(theme => ({
+    root: {
+        flexGrow: 1,
+    },
+}));
+
+let portfolio = config.get("portfolio");
 
 let work = [
     <CardInfo
-        href={"https://bugzilla.mozilla.org/page.cgi?id=user_activity.html&action=run&who=reeisesean%40gmail.com&from=2018-01-01&to=2019-01-01&group=when"}
-        src={"images/Mozilla-logo-md.png"} title={"My contributions to Mozilla"} button={"See More"}
+        href={portfolio.mozilla.link}
+        src={portfolio.mozilla.imgSrc}
+        title={portfolio.mozilla.title}
+        button={"See More"}
     />,
-    <CardInfo href={"https://github.com/sreeise"} src={"images/github-color-circle.jpg"} title={"My work on GitHub"}
-              button={"See More"}/>,
-    <CardInfo href={"https://www.linkedin.com/in/sean-r-48b36b135/"} src={"images/linkedin-logo-702336.jpg"}
-              title={"Find me on LinkedIn"} button={"See More"}/>,
-    <CardInfo href={"https://bitbucket.org/sreeise/"} src={"images/bitbucket.jpg"} title={"My projects on BitBucket"}
-              button={"See More"}/>,
-    <CardInfo href={"https://bitsrc.io/sreeise"} src={"images/bit.png"} title={"My projects on Bit"}
-              button={"See More"}/>,
-    <CardInfo href={"https://github.com/sreeise/sreeise-source"} src={"images/sreeise-source.png"}
-              title={"The source code for this website. Built using React."}
-              button={"Lets Go!"}/>,
+    <CardInfo href={portfolio.github.link}
+              src={portfolio.github.imgSrc}
+              title={portfolio.github.title}
+              button={"See More"}
+    />,
+    <CardInfo href={portfolio.srSource.link}
+              src={portfolio.srSource.imgSrc}
+              title={portfolio.srSource.title}
+              button={"Lets Go!"}
+    />,
 ];
+
+function GridLayout() {
+    const classes = useStyles();
+    return(
+        <Grid container
+              direction="row"
+              justify="center"
+              alignItems="center"
+              className={classes.root}>
+            <Grid item xs={8}>
+                <CardFlex cards={work}/>
+            </Grid>
+            <Grid item xs={3}>
+                <AboutMeCards />
+            </Grid>
+        </Grid>
+    );
+}
 
 class App extends Component {
     render() {
         return (
-            <div className={"container"}>
+            <div>
                 <PageHeader/>
-                <AboutMe/>
-                <CardFlex cards={work}/>
+                <GridLayout/>
             </div>
         );
     }

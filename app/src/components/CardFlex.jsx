@@ -21,7 +21,7 @@ class CardFlex extends React.Component {
                     <section className={"cards"}>
                         {this.state.cards.map((card) => {
                             return (
-                                <div>{card}</div>
+                                <div key={this.state.cards.indexOf(card)}>{card}</div>
                             )
                         })}
                     </section>
