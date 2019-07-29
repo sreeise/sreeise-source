@@ -20,13 +20,13 @@ const config = convict({
     },
     aboutMe: {
         hobbies: {
-            title: "Hobbies and Work",
+            title: "Hobbies",
             content: "My hobbies are programming an working on open source projects. I am a regular contributor to Mozilla.\
                     I started out contributing to Firefox. Now I mainly focus on contributing to Servo, the experimental\
                     browser from Mozilla written in the Rust programming language",
         },
         education: {
-            title: "Education:",
+            title: "Education",
             content: "Bachelor of Science in Information Technology and an Associates of Arts in Religion from Liberty University",
         },
         faith: {

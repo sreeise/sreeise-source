@@ -20,9 +20,7 @@ class CardFlex extends React.Component {
                 <main>
                     <section className={"cards"}>
                         {this.state.cards.map((card) => {
-                            return (
-                                <div key={this.state.cards.indexOf(card)}>{card}</div>
-                            )
+                            return <div key={this.state.cards.indexOf(card)}>{card}</div>;
                         })}
                     </section>
                 </main>
@@ -30,6 +28,5 @@ class CardFlex extends React.Component {
         );
     }
 }
-
 
 export default CardFlex;

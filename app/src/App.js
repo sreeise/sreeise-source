@@ -8,8 +8,9 @@ import AboutMeCards from "./components/AboutMe";
 import config from "./config";
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(({
     root: {
         flexGrow: 1,
     },
@@ -36,33 +37,35 @@ let work = [
     />,
 ];
 
-function GridLayout() {
+function App() {
     const classes = useStyles();
     return(
-        <Grid container
-              direction="row"
-              justify="center"
-              alignItems="center"
-              className={classes.root}>
-            <Grid item xs={8}>
-                <CardFlex cards={work}/>
-            </Grid>
-            <Grid item xs={3}>
-                <AboutMeCards />
-            </Grid>
-        </Grid>
-    );
-}
+        <div>
+            <PageHeader/>
+            <Grid container
+                  direction="row"
+                  justify="center"
+                  alignItems="center"
+                  className={classes.root}>
+                <Hidden only={['xs', 'sm']}>
+                    <Grid item xs={3}>
+                        <AboutMeCards />
+                    </Grid>
+                    <Grid item xs={8}>
+                        <CardFlex cards={work}/>
+                    </Grid>
+                </Hidden>
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <PageHeader/>
-                <GridLayout/>
-            </div>
-        );
-    }
+                <Hidden only={['md', 'xl', 'lg']}>
+                    <Grid item xs={12}>
+                        <CardFlex cards={work}/>
+                        <AboutMeCards/>
+                    </Grid>
+
+                </Hidden>
+            </Grid>
+        </div>
+    );
 }
 
 export default App;

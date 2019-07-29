@@ -14,6 +14,7 @@ const styles = {
         maxWidth: 555,
         width: 300,
         margin: 10,
+        flexGrow: 1,
     },
     media: {
         width: 300,
@@ -30,7 +31,7 @@ class CardInfo extends React.Component {
         return (
             <Card className={classes.card}>
                 <CardActionArea>
-                    <a href={this.props.href}>
+                    <a href={this.props.href} target={"_blank"}>
                         <CardMedia
                             className={classes.media}
                             image={this.props.src}
@@ -44,7 +45,7 @@ class CardInfo extends React.Component {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <a href={this.props.href}>
+                    <a href={this.props.href} target={"_blank"}>
                         <Button size="small" color="primary">
                             {this.props.button}
                         </Button>
