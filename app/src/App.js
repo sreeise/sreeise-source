@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './css/index.css';
 import './css/normalize.css';
 import CardInfo from "./components/card.jsx";
@@ -61,7 +61,6 @@ function App() {
                         <CardFlex cards={work}/>
                         <AboutMeCards/>
                     </Grid>
-
                 </Hidden>
             </Grid>
         </div>
