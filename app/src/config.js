@@ -13,6 +13,7 @@ const config = convict({
       link: 'https://github.com/sreeise/graph-rs',
       title: 'graph-rs',
       content:
+        // eslint-disable-next-line
         'Microsoft Graph API client written in the Rust programming language.\
           Provides integration with OneDrive, mail, user data, contacts, and more.',
     },
@@ -20,6 +21,7 @@ const config = convict({
       link: 'https://divinecaninellc.com',
       title: 'The Divine Canine',
       content:
+        // eslint-disable-next-line
         'The Divine Canine is an awesome dog grooming shop in Inman South Carolina.\
           I designed their website and continue to help automate their business process and workflows.\
           They consider me as their personal IT administrator and developer.',
@@ -55,6 +57,7 @@ const config = convict({
     faith: {
       title: 'Faith',
       content:
+        // eslint-disable-next-line
         'I am a Christian that believes that Jesus Christ is the one and only true savior.\
          I also believe in loving each other just as Jesus taught and regardless of whether you\
          hold the same beliefs as me. Romans 12:10 says: "Be devoted to one another in love. Honor one another above yourselves." (NIV)',
@@ -62,6 +65,7 @@ const config = convict({
     openSource: {
       title: 'Open Source',
       content:
+        // eslint-disable-next-line
         'I am a regular contributor to Mozilla. I started out contributing to Firefox. Now I mainly focus on\n\
           contributing to Servo, the experimental browser from Mozilla written in the Rust programming language,',
     },

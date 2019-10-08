@@ -162,7 +162,7 @@ function App() {
               <div className={'column is-5'}>
                 <div className={'column'}>
                   <figure className={'image'}>
-                    <img alt={'landing-page-image image'} src={Analysis} />
+                    <img alt={'developer working'} src={Analysis} />
                   </figure>
                 </div>
               </div>

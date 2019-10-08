@@ -12,7 +12,7 @@ class ConsentNotification extends React.Component {
   }
 
   componentDidMount() {
-    if (CookieReader().hasConsent('srme-analytics=agreed')) {
+    if (CookieReader().hasCookie('srme-analytics=agreed')) {
       this.setState({
         consent: true,
       });
@@ -21,7 +21,9 @@ class ConsentNotification extends React.Component {
 
   onConsent() {
     CookieReader().setCookie(
-      'srme-analytics=agreed;SameSite=Strict;expires=Fri, 4 Jan 2022 15:04:05 GMT',
+      'srme-analytics',
+      'agreed',
+      'Fri, 4 Jan 2022 15:04:05 GMT',
     );
     this.setState({
       consent: true,
@@ -33,7 +35,7 @@ class ConsentNotification extends React.Component {
       return null;
     }
 
-    if (CookieReader().hasConsent('srme-analytics=agreed')) {
+    if (CookieReader().hasCookie('srme-analytics=agreed')) {
       return null;
     }
 
@@ -49,12 +51,12 @@ class ConsentNotification extends React.Component {
         }}
         className={'message is-primary'}
       >
-        <div className="message-header">
+        <div className={'message-header'}>
           <p>Notification</p>
           <button
             onClick={() => this.onConsent()}
-            className="delete"
-            aria-label="delete"
+            className={'delete'}
+            aria-label={'delete'}
           ></button>
         </div>
         <div className="message-body">

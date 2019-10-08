@@ -74,7 +74,7 @@ export default class NavBar extends React.Component {
             <Link to={'/'} className={'navbar-item'}>
               <i className="fas fa-code"></i>
             </Link>
-            <a
+            <div
               onClick={() => this.mobileMenuOpen()}
               role="button"
               className="navbar-burger burger"
@@ -85,7 +85,7 @@ export default class NavBar extends React.Component {
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
-            </a>
+            </div>
           </div>
 
           <div className={`navbar-menu ${this.state.navMenuClassName}`}>
